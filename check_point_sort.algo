@@ -1,0 +1,21 @@
+ALGORITHM sorting
+VAR
+    piv : INTEGER := T[0];
+    n   : INTEGER := T.length;
+    i   : INTEGER := 0;
+    j   : INTEGER := i-1;
+BEGIN
+    FOR i FROM 0 TO n STEP 1  DO
+        Write (T[i]);
+        Read  (T[i]);
+    END_FOR
+    FOR i FROM 0 TO n STEP 1  DO
+        piv := T[i];
+        j   := j - 1;
+        WHILE (j >= 0 and T[j] > piv) DO
+            T[j + 1] = T[j]; 
+            j        = j - 1; 
+        END_WHILE
+        T[j + 1] = piv;
+    END_FOR
+END
