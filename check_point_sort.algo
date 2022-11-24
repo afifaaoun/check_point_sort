@@ -9,7 +9,7 @@ BEGIN
         Write (T[i]);
         Read  (T[i]);
     END_FOR
-    FOR i FROM 0 TO n STEP 1  DO
+    FOR i FROM 1 TO n STEP 1  DO
         piv := T[i];
         j   := j - 1;
         WHILE (j >= 0 and T[j] > piv) DO
